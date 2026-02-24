@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Admi
@@ -118,6 +119,34 @@ class SummaryDetail
      * @var float
      */
     private $mtoIcbper;
+
+    /**
+     * Porcentaje IGV (default 18.00).
+     *
+     * @var float
+     */
+    private $porcentajeIgv = 18.00;
+
+    /**
+     * Porcentaje IVAP (default 4.00).
+     *
+     * @var float
+     */
+    private $porcentajeIvap = 4.00;
+
+    /**
+     * Porcentaje ISC.
+     *
+     * @var float
+     */
+    private $porcentajeIsc;
+
+    /**
+     * Porcentaje Otros Tributos.
+     *
+     * @var float
+     */
+    private $porcentajeOtrosTributos;
 
     /**
      * @return string
@@ -495,6 +524,86 @@ class SummaryDetail
     public function setMtoIcbper(?float $mtoIcbper): SummaryDetail
     {
         $this->mtoIcbper = $mtoIcbper;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeIgv(): ?float
+    {
+        return $this->porcentajeIgv;
+    }
+
+    /**
+     * @param float $porcentajeIgv
+     *
+     * @return SummaryDetail
+     */
+    public function setPorcentajeIgv(?float $porcentajeIgv): SummaryDetail
+    {
+        $this->porcentajeIgv = $porcentajeIgv;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeIvap(): ?float
+    {
+        return $this->porcentajeIvap;
+    }
+
+    /**
+     * @param float $porcentajeIvap
+     *
+     * @return SummaryDetail
+     */
+    public function setPorcentajeIvap(?float $porcentajeIvap): SummaryDetail
+    {
+        $this->porcentajeIvap = $porcentajeIvap;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeIsc(): ?float
+    {
+        return $this->porcentajeIsc;
+    }
+
+    /**
+     * @param float $porcentajeIsc
+     *
+     * @return SummaryDetail
+     */
+    public function setPorcentajeIsc(?float $porcentajeIsc): SummaryDetail
+    {
+        $this->porcentajeIsc = $porcentajeIsc;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeOtrosTributos(): ?float
+    {
+        return $this->porcentajeOtrosTributos;
+    }
+
+    /**
+     * @param float $porcentajeOtrosTributos
+     *
+     * @return SummaryDetail
+     */
+    public function setPorcentajeOtrosTributos(?float $porcentajeOtrosTributos): SummaryDetail
+    {
+        $this->porcentajeOtrosTributos = $porcentajeOtrosTributos;
 
         return $this;
     }

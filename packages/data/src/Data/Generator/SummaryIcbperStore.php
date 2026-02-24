@@ -37,7 +37,8 @@ class SummaryIcbperStore implements DocumentGeneratorInterface
             ->setMtoOperExoneradas(0)
             ->setMtoOperExportacion(0)
             ->setMtoIcbper(0.10)
-            ->setMtoIGV(1.8);
+            ->setMtoIGV(1.8)
+            ->setPorcentajeIgv(18);
 
         $sum = new Summary();
         $sum->setFecGeneracion(new DateTime('-1days'))

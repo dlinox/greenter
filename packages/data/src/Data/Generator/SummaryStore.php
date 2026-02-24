@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Giansalex
@@ -45,7 +46,8 @@ class SummaryStore implements DocumentGeneratorInterface
             ->setMtoOperExoneradas(50)
             ->setMtoOperExportacion(10)
             ->setMtoOtrosCargos(21)
-            ->setMtoIGV(3.6);
+            ->setMtoIGV(3.6)
+            ->setPorcentajeIgv(18);
 
         $detiail2 = new SummaryDetail();
         $detiail2->setTipoDoc('07')
@@ -62,7 +64,9 @@ class SummaryStore implements DocumentGeneratorInterface
             ->setMtoOperInafectas(120)
             ->setMtoOperGratuitas(10)
             ->setMtoIGV(7.2)
-            ->setMtoISC(2.8);
+            ->setPorcentajeIgv(18)
+            ->setMtoISC(2.8)
+            ->setPorcentajeIsc(0);
 
         $detiail3 = new SummaryDetail();
         $detiail3->setTipoDoc('03')

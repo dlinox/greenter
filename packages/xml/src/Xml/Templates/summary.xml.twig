@@ -111,6 +111,7 @@
             <cac:TaxSubtotal>
                 <cbc:TaxAmount currencyID="{{ doc.moneda }}">{{ ivap }}</cbc:TaxAmount>
                 <cac:TaxCategory>
+                    <cbc:Percent>{{ det.porcentajeIvap|n_format }}</cbc:Percent>
                     <cac:TaxScheme>
                         <cbc:ID>1016</cbc:ID>
                         <cbc:Name>IVAP</cbc:Name>
@@ -126,6 +127,7 @@
             <cac:TaxSubtotal>
                 <cbc:TaxAmount currencyID="{{ doc.moneda }}">{{ igv }}</cbc:TaxAmount>
                 <cac:TaxCategory>
+                    <cbc:Percent>{{ det.porcentajeIgv|n_format }}</cbc:Percent>
                     <cac:TaxScheme>
                         <cbc:ID>1000</cbc:ID>
                         <cbc:Name>IGV</cbc:Name>
@@ -142,6 +144,9 @@
             <cac:TaxSubtotal>
                 <cbc:TaxAmount currencyID="{{ doc.moneda }}">{{isc }}</cbc:TaxAmount>
                 <cac:TaxCategory>
+                    {% if det.porcentajeIsc is not null %}
+                    <cbc:Percent>{{ det.porcentajeIsc|n_format }}</cbc:Percent>
+                    {% endif %}
                     <cac:TaxScheme>
                         <cbc:ID>2000</cbc:ID>
                         <cbc:Name>ISC</cbc:Name>
@@ -158,6 +163,9 @@
             <cac:TaxSubtotal>
                 <cbc:TaxAmount currencyID="{{ doc.moneda }}">{{ oth }}</cbc:TaxAmount>
                 <cac:TaxCategory>
+                    {% if det.porcentajeOtrosTributos is not null %}
+                    <cbc:Percent>{{ det.porcentajeOtrosTributos|n_format }}</cbc:Percent>
+                    {% endif %}
                     <cac:TaxScheme>
                         <cbc:ID>9999</cbc:ID>
                         <cbc:Name>OTROS</cbc:Name>
